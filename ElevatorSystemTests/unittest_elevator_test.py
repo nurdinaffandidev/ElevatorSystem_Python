@@ -25,6 +25,16 @@ class TestElevator(unittest.TestCase):
         self.assertEqual(elevator.current_floor, 1)  # Only valid commands count
         self.assertEqual(elevator.stops, 1)
 
+    def test_get_score(self):
+        elevator = Elevator("e5", 1, 5, "UUUSSD")
+        elevator.process_commands()
+        self.assertEqual(elevator.get_score(), 2)
+
+    def test_get_score_no_stop(self):
+        elevator = Elevator("e6", 1, 5, "UUU")
+        elevator.process_commands()
+        self.assertEqual(elevator.get_score(), 3)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -26,14 +26,14 @@ class Elevator:
 
     def get_score(self):
         if self.stops == 0:
-            return format(self.floors_travelled, ".1f")
+            return self.floors_travelled
         return round(self.floors_travelled / self.stops, 2)
 
 
     def report(self):
         print(f"Elevator {self.name} started on floor {self.history[0][0]} moving {self.commands}")
         print(f"Elevator {self.name} ended on floor {self.current_floor} with {self.stops} stops.")
-        print(f"efficiency: {self.get_score()}\n")
+        print(f"efficiency: {format(self.get_score(),".2f")}\n")
         self.report_state_log()
         print()
 
