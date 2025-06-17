@@ -27,7 +27,7 @@ This project simulates a smart elevator system that processes movement commands 
    ```
    or python unit test:
    ```
-   python -m unittest ElevatorSystemTests/unittest_elecator_test.py
+   python -m unittest ElevatorSystemTests/unittest_elevator_test.py
    ```
 
 ## 🧑‍💻 Running the program
